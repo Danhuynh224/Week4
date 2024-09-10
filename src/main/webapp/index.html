@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+    <title>Chapter 4</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+</head>
+<body>
+<img src="./Img/logo.jpg" alt="" />
+<h1>Survey</h1>
+<p>
+    If you have a moment, we'd appreciate it if you would fill out this survey
+</p>
+<form action="surveyList" method="post">
+    <input type="hidden" name="action" value="add">
+    <h2>Your information</h2>
+    <label class="fortext">First Name</label>
+    <input type="text" name="firstName" required /> <br />
+    <label class="fortext">Last Name</label>
+    <input type="text" name="lastName" required /> <br />
+    <label class="fortext">Email</label>
+    <input type="text" name="email" required /> <br />
+    <label class="fortext">Date of Birth</label>
+    <input type="text" name="doB" required /> <br />
+    <h2>How did you hear about us?</h2>
+    <input
+            type="radio"
+            id="SearchEngine"
+            name="hearAboutMe"
+            value="Search Engine"
+    />
+    <label for="SearchEngine">Search Engine</label>
+    <input
+            type="radio"
+            id="WordOfMouth"
+            name="hearAboutMe"
+            value="Word Of Mouth"
+    />
+    <label for="WordOfMouth">Word Of Mouth</label>
+
+    <input
+            type="radio"
+            id="SocialMedia"
+            name="hearAboutMe"
+            value="Social Media"
+    />
+    <label for="SocialMedia">Social Media</label>
+    <input type="radio" id="Other" name="hearAboutMe" value="Other" />
+    <label for="Other">Other</label>
+    <h2>
+        Would you like to receive announcements about new CDs and special offers
+    </h2>
+    <input type="checkbox" id="check1" name="check1" value="I like that" />
+    <label for="check1"> Yes, I'd like that</label><br />
+    <input type="checkbox" id="check2" name="check2" value="Send email" />
+    <label for="check1"> Yes, please send me email announcements</label><br />
+    <label >Please contact me by: </label>
+    <select name="contact" >
+        <option>Email or postal mail</option>
+        <option>Phone</option>
+        <option>Direct</option>
+        <option>Others</option></select><br />
+    <input type="submit" value="Submit" id="submit" />
+</form>
+</body>
+</html>
