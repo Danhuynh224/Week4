@@ -4,68 +4,97 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 <html>
-<head>
+  <head>
     <title>Chapter 4</title>
     <meta charset="UTF-8" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" type="text/css" />
-</head>
-<body>
-<img src="./Img/logo.jpg" alt="" />
-<h1>Survey</h1>
-<p>
-    If you have a moment, we'd appreciate it if you would fill out this survey
-</p>
-<form action="surveyList" method="post">
-    <input type="hidden" name="action" value="add">
-    <h2>Your information</h2>
-    <label class="fortext">First Name</label>
-    <input type="text" name="firstName" required /> <br />
-    <label class="fortext">Last Name</label>
-    <input type="text" name="lastName" required /> <br />
-    <label class="fortext">Email</label>
-    <input type="text" name="email" required /> <br />
-    <label class="fortext">Date of Birth</label>
-    <input type="text" name="doB" required /> <br />
-    <h2>How did you hear about us?</h2>
-    <input
-            type="radio"
-            id="SearchEngine"
-            name="hearAboutMe"
-            value="Search Engine"
-    />
-    <label for="SearchEngine">Search Engine</label>
-    <input
-            type="radio"
-            id="WordOfMouth"
-            name="hearAboutMe"
-            value="Word Of Mouth"
-    />
-    <label for="WordOfMouth">Word Of Mouth</label>
+  </head>
+  <body>
+    <div class="container">
+    <img src="./Img/logo.jpg" alt="" />
+    <h1>Survey</h1>
+    <p>
+      If you have a moment, we'd appreciate it if you would fill out this survey
+    </p>
+    <form action="surveyList" method="post">
+      <input type="hidden" name="action" value="add" />
+      <h2>Your information</h2>
+      <div class="form-group">
+        <label class="fortext">First Name:</label>
+        <input type="text" class="form-control" name="firstName" required />
+      </div>
+      <div class="form-group">
+        <label class="fortext">Last Name:</label>
+        <input type="text" class="form-control" name="lastName" required /> 
+      </div>
+        <div class="form-group">
+          <label class="fortext">Email:</label>
+        <input type="text"class="form-control" name="email" required /> 
+        </div>
+      <div class="form-group">
+        <label class="fortext">Date of Birth:</label>
+        <input type="date" class="form-control w-50" name="doB" required />
+      </div> 
+      <br>
+      <h2>How did you hear about us?</h2>
+      <input
+        type="radio"
+        id="SearchEngine"
+        name="hearAboutMe"
+        value="Search Engine"
+      />
+      <label class="radio-inline" for="SearchEngine">Search Engine</label>
+      <input
+        type="radio"
+        id="WordOfMouth"
+        name="hearAboutMe"
+        value="Word Of Mouth"
+      />
+      <label class="radio-inline" for="WordOfMouth">Word Of Mouth</label>
 
-    <input
-            type="radio"
-            id="SocialMedia"
-            name="hearAboutMe"
-            value="Social Media"
-    />
-    <label for="SocialMedia">Social Media</label>
-    <input type="radio" id="Other" name="hearAboutMe" value="Other" />
-    <label for="Other">Other</label>
-    <h2>
+      <input
+        type="radio"
+        id="SocialMedia"
+        name="hearAboutMe"
+        value="Social Media"
+      />
+      <label class="radio-inline" for="SocialMedia">Social Media</label>
+      <input type="radio" id="Other" name="hearAboutMe" value="Other" />
+      <label class="radio-inline" for="Other">Other</label>
+      <h2>
         Would you like to receive announcements about new CDs and special offers
-    </h2>
-    <input type="checkbox" id="check1" name="check1" value="I like that" />
-    <label for="check1"> Yes, I'd like that</label><br />
-    <input type="checkbox" id="check2" name="check2" value="Send email" />
-    <label for="check1"> Yes, please send me email announcements</label><br />
-    <label >Please contact me by: </label>
-    <select name="contact" >
+      </h2>
+      <br>
+      <div class="d-flex align-items-start">
+        <input 
+        class="mt-1 me-2"type="checkbox" id="check1" name="check1" value="I like that" />
+        <label for="check1"> Yes, I'd like that</label>
+        <input class="mt-1 me-2" type="checkbox" id="check2" name="check2" value="Send email" />
+        <label for="check1"> Yes, please send me email announcements</label><br />
+      </div >
+      <br>
+      <label><strong>Please contact me by:</strong> </label>
+      <select  class="form-control w-50"  name="contact">
         <option>Email or postal mail</option>
         <option>Phone</option>
         <option>Direct</option>
-        <option>Others</option></select><br />
-    <input type="submit" value="Submit" id="submit" />
-</form>
-</body>
+        <option>Others</option></select
+      ><br />
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+
+  </div>
+  </body>
 </html>

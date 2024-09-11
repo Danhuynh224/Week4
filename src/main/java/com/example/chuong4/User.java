@@ -4,12 +4,13 @@
  */
 package com.example.chuong4;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
-    private String doB;
+    private LocalDate doB;
     private String hearAboutMe;
     private String receive;
     private String contact;
@@ -19,12 +20,12 @@ public class User implements Serializable {
         firstName= "";
         lastName= "";
         email = "";
-        doB="";
+        doB=LocalDate.now();
         hearAboutMe="";
         receive="";
 //        contact="";
     }
-    public User(String firstName, String lastName, String email, String doB){
+    public User(String firstName, String lastName, String email, LocalDate doB){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -48,10 +49,10 @@ public class User implements Serializable {
     public void setEmail(String email){
         this.email = email;
     }
-    public String getdoB(){
+    public LocalDate getdoB(){
         return doB;
     }
-    public void setdoB(String doB){
+    public void setdoB(LocalDate doB){
         this.doB = doB;
     }
     public String getHearAboutMe(){

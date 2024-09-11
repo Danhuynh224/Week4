@@ -6,6 +6,7 @@
 package com.example.chuong4;
 
 import java.io.*;
+import java.time.LocalDate;
 
 
 import com.example.chuong4.User;
@@ -43,7 +44,11 @@ public class SurveyListServlet extends HttpServlet {
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
-            String doB=request.getParameter("doB");
+            String doBStr = request.getParameter("doB");
+            LocalDate doB=null;
+            if (doBStr != null && !doBStr.isEmpty()) {
+                doB = LocalDate.parse(doBStr); // Chuyển đổi chuỗi thành LocalDate
+            }
             String hearAboutMe = request.getParameter("hearAboutMe");
             System.out.println(hearAboutMe);
             String checkBox1 = request.getParameter("check1") != null ? "Yes I'd like that." : null;
